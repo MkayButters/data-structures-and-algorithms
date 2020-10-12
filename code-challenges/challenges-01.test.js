@@ -97,22 +97,23 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  let output = []
+  let output = [];
   arr.forEach(num => {
-    if (num % 3 === "Fizz"){
-      num.push(output)
-    };
-    if (num % 5 === "Buzz"){
-      num.push(output)
-    };
-    if (num % 3 || num % 5 === "Fizz Buzz"){
-      num.push(output)
-    };
+    if (num % 3 === 0 && num % 5 === 0 ){
+      output.push('Fizz Buzz')
+    } 
+    else if (num % 3 === 0){
+      output.push('Fizz')
+    }
+    else if (num % 5 === 0) {
+      output.push('Buzz')
+    }
     else {
-    (num.push(output))
+      output.push(num)
     }
   });
-};
+  return output;
+}
 
 /* ------------------------------------------------------------------------------------------------
 TESTS
