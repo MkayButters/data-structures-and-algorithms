@@ -10,14 +10,20 @@ Then, write a function named speaker that takes in a string and a callback funct
 
 const greeting = (word) => {
   // Solution code here...
-  let word = [toUpperCase().word]
+  // let result = '';
+  // const arrayFromString = word.split('');
+  // arrayFromString.forEach(input => result += input.toUpperCase());
+  return word.toUpperCase();
 };
 
 const speaker = (message, callback) => {
   // Solution code here...
-let message = callback.toUpperCase(message)
+  let result = '';
+  const arrayFromString = message.split('');
+  arrayFromString.forEach(character => result += callback(character));
+  return result;
 
-
+}
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
 
@@ -36,15 +42,15 @@ Return the modified array.
 
 const addValues = (arr, value) => {
   // Solution code here...
-  let arr = ['a' , 'b' , 'c']
-  arr.forEach(value,i); {
-    arr.push(value)
-  };
+  arr.push(value)
 };
 
 const addNumbers = (num, arr, times, callback) => {
   // Solution code here...
-  
+  for (let i = 0; i < times; i++) {
+    callback(arr, num);
+  }
+  return arr
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -66,8 +72,15 @@ This function should use forEach to populate your grocery list based on the stor
 ------------------------------------------------------------------------------------------------ */
 
 const createList = (availableItems) => {
-  // Solution code here...
+  let groceryList = []
+  availableItems.forEach(function(item) {
+    if (item.available === true){
+      groceryList.push(item.name)
+    }
+});
+  return groceryList
 };
+
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
@@ -84,7 +97,21 @@ Return the resulting output array.
 ------------------------------------------------------------------------------------------------ */
 
 const fizzbuzz = (arr) => {
-  // Solution code here...
+  let output = []
+  arr.forEach(num => {
+    if (num % 3 === "Fizz"){
+      num.push(output)
+    };
+    if (num % 5 === "Buzz"){
+      num.push(output)
+    };
+    if (num % 3 || num % 5 === "Fizz Buzz"){
+      num.push(output)
+    };
+    else {
+    (num.push(output))
+    }
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
