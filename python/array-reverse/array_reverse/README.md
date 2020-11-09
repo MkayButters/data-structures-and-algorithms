@@ -10,4 +10,4 @@ The approach i took was from what i learned in the pre-work. Robert knew what he
 
 ## White Board
 
-<img src="image.png">
+<img src="assests/image.png">
