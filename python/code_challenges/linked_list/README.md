@@ -28,3 +28,24 @@ The approach i took was breaking down each section and building it into a whole 
 5. Will return true when finding a value within the linked list that exists
 6. Will return false when searching for a value in the linked list that does not exist
 7. Can properly return a collection of all the values that exist in the linked list
+
+
+# ll-insertions
+
+## Challenge Summary
+
+Work as a pair to create methods to LinkedList class to compelete challenge description and create tests to make sure it works properly
+
+## Challenge Description
+
+- .append(value) which adds a new node with the given value to the end of the list
+- .insertBefore(value, newVal) which add a new node with the given newValue immediately before the first value node
+- .insertAfter(value, newVal) which add a new node with the given newValue immediately after the first value node
+
+## Approach & Efficiency
+
+Approach we took was compelete the parts we knew how to do and pull it appart in chunks. This makes it easier and more managable. Big O is O(n).
+
+## Solution
+
+<img src="assests/cc06.png">

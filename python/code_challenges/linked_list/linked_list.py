@@ -3,6 +3,8 @@ class Node:
         self.value = value
         self.next = next
 
+    def __str__(self):
+        return f"{self.value}"
 
 class LinkedList:
     def __init__(self, head = None):
@@ -11,7 +13,6 @@ class LinkedList:
     def insert(self, value):
         new_node = Node(value, self.head)
         self.head = new_node
-
 
     def includes(self, value):
         node = self.head
@@ -25,7 +26,53 @@ class LinkedList:
         node = self.head
         results =  []
         while node != None:
-            results.append('{ ' +node.value+ ' }')
+            results.append('{ ' + str(node.value) + ' }')
             node = node.next
         results.append("NULL")
         return " -> ".join(results)
+
+    def append(self, value):
+        if self.head == None:
+            self.insert(value)
+        else:
+            current = self.head
+            while current.next != None:
+                current = current.next
+
+            current.next = Node(value, None)
+
+    def insertBefore(self, value, newValue):
+        current = self.head
+        if not current:
+            return "error not found"
+
+        if current.value == value:
+            self.insert(newValue)
+
+        if current.value == newValue:
+            new_node == (newValue, current)
+            self.head = new_node
+
+        else:
+            while current.next:
+                if current.next.value == value:
+                    new_node = Node(newValue, current.next)
+                    current.next = new_node
+                    break
+                current = current.next
+
+    def insertAfter(self, value, newValue):
+        if not self.head:
+            return "error"
+
+        current = self.head
+        while current:
+            if current.value == value:
+                current.next = Node(newValue, current.next)
+                return
+            current = current.next
+
+
+
+
+
