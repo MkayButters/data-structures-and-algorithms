@@ -57,3 +57,70 @@ def test_return_collection():
     expected = "{ a } -> { b } -> { c } -> NULL"
     assert expected == collection.__str__()
 
+#Challenge 6 tests
+
+def test_append_one():
+    append_one = LinkedList()
+    append_one.append("last one")
+    actual = append_one.head.value
+    expected = "last one"
+    assert actual == expected
+
+def test_append_multiple():
+    append_many = LinkedList()
+    append_many.insert("c")
+    append_many.insert("b")
+    append_many.insert("a")
+    append_many.append("d")
+    append_many.append("e")
+    append_many.append("f")
+    append_many.append("g")
+    actual = str(append_many)
+    expected = "{ a } -> { b } -> { c } -> { d } -> { e } -> { f } -> { g } -> NULL"
+    assert actual == expected
+
+@pytest.mark.skip("skip")
+def test_before_middle():
+    make_list = LinkedList()
+    make_list.insert(3)
+    make_list.insert(1)
+    make_list.append(5)
+    make_list.append(11)
+    make_list.append(3)
+    make_list.insertBefore(5,8)
+    actual = str(make_list)
+    expected = "{ 1 } -> { 3 } -> { 8 } -> { 5 } -> { 11 } -> { 3 } -> NULL "
+    assert actual == expected
+
+@pytest.mark.skip("skip")
+def test_before_first():
+    make_list = LinkedList()
+    make_list.insert(3)
+    make_list.insert(1)
+    make_list.append(5)
+    make_list.append(11)
+    make_list.append(3)
+    make_list.insertBefore(5,8)
+    actual = str(make_list)
+    expected = "{ 5 } -> { 8 } -> { 1 } -> { 5 } -> { 11 } -> { 3 } -> NULL"
+    assert actual == expected
+
+
+@pytest.mark.skip("skip")
+def test_after_middle():
+    make_list = LinkedList()
+    make_list.insert(3)
+    make_list.insert(1)
+    make_list.append(5)
+    make_list.append(11)
+    make_list.append(3)
+    make_list.insertAfter()
+
+@pytest.mark.skip("skip")
+def test_after_end():
+    make_list = LinkedList()
+    make_list.insert(3)
+    make_list.insert(1)
+    make_list.append(5)
+    make_list.append(11)
+    make_list.append(3)

@@ -12,7 +12,6 @@ class LinkedList:
         new_node = Node(value, self.head)
         self.head = new_node
 
-
     def includes(self, value):
         node = self.head
         while node != None:
@@ -25,7 +24,26 @@ class LinkedList:
         node = self.head
         results =  []
         while node != None:
-            results.append('{ ' +node.value+ ' }')
+            results.append('{ ' + str(node.value) + ' }')
             node = node.next
         results.append("NULL")
         return " -> ".join(results)
+
+    def append(self, value):
+        if self.head == None:
+            self.insert(value)
+        else:
+            current = self.head
+            while current.next != None:
+                current = current.next
+
+            current.next = Node(value, None)
+
+    def insertBefore(self, value, newValue):
+        pass
+        # current = self.head
+        # if current.next.value == newValue:
+
+    def insertAfter(self, value, newValue):
+        pass
+
