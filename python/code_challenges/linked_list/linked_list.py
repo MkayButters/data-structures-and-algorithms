@@ -3,6 +3,8 @@ class Node:
         self.value = value
         self.next = next
 
+    def __str__(self):
+        return f"{self.value}"
 
 class LinkedList:
     def __init__(self, head = None):
@@ -40,10 +42,37 @@ class LinkedList:
             current.next = Node(value, None)
 
     def insertBefore(self, value, newValue):
-        pass
-        # current = self.head
-        # if current.next.value == newValue:
+        current = self.head
+        if not current:
+            return "error not found"
+
+        if current.value == value:
+            self.insert(newValue)
+
+        if current.value == newValue:
+            new_node == (newValue, current)
+            self.head = new_node
+
+        else:
+            while current.next:
+                if current.next.value == value:
+                    new_node = Node(newValue, current.next)
+                    current.next = new_node
+                    break
+                current = current.next
 
     def insertAfter(self, value, newValue):
-        pass
+        if not self.head:
+            return "error"
+
+        current = self.head
+        while current:
+            if current.value == value:
+                current.next = Node(newValue, current.next)
+                return
+            current = current.next
+
+
+
+
 

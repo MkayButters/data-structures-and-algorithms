@@ -79,7 +79,6 @@ def test_append_multiple():
     expected = "{ a } -> { b } -> { c } -> { d } -> { e } -> { f } -> { g } -> NULL"
     assert actual == expected
 
-@pytest.mark.skip("skip")
 def test_before_middle():
     make_list = LinkedList()
     make_list.insert(3)
@@ -89,10 +88,9 @@ def test_before_middle():
     make_list.append(3)
     make_list.insertBefore(5,8)
     actual = str(make_list)
-    expected = "{ 1 } -> { 3 } -> { 8 } -> { 5 } -> { 11 } -> { 3 } -> NULL "
+    expected = "{ 1 } -> { 3 } -> { 8 } -> { 5 } -> { 11 } -> { 3 } -> NULL"
     assert actual == expected
 
-@pytest.mark.skip("skip")
 def test_before_first():
     make_list = LinkedList()
     make_list.insert(3)
@@ -100,13 +98,11 @@ def test_before_first():
     make_list.append(5)
     make_list.append(11)
     make_list.append(3)
-    make_list.insertBefore(5,8)
+    make_list.insertBefore(1,8)
     actual = str(make_list)
-    expected = "{ 5 } -> { 8 } -> { 1 } -> { 5 } -> { 11 } -> { 3 } -> NULL"
+    expected = "{ 8 } -> { 1 } -> { 3 } -> { 5 } -> { 11 } -> { 3 } -> NULL"
     assert actual == expected
 
-
-@pytest.mark.skip("skip")
 def test_after_middle():
     make_list = LinkedList()
     make_list.insert(3)
@@ -114,13 +110,20 @@ def test_after_middle():
     make_list.append(5)
     make_list.append(11)
     make_list.append(3)
-    make_list.insertAfter()
+    make_list.insertAfter(5,8)
+    actual = str(make_list)
+    expected = "{ 1 } -> { 3 } -> { 5 } -> { 8 } -> { 11 } -> { 3 } -> NULL"
+    assert actual == expected
 
-@pytest.mark.skip("skip")
+
 def test_after_end():
     make_list = LinkedList()
     make_list.insert(3)
     make_list.insert(1)
     make_list.append(5)
     make_list.append(11)
-    make_list.append(3)
+    make_list.append(7)
+    make_list.insertAfter(7,8)
+    actual = str(make_list)
+    expected = "{ 1 } -> { 3 } -> { 5 } -> { 11 } -> { 7 } -> { 8 } -> NULL"
+    assert actual == expected
