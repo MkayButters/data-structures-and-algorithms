@@ -78,14 +78,14 @@ class LinkedList:
         follower = self.head
         if k < 0:
             raise ValueError("You cannot enter a negative integer")
-        while count <= k and leader:
+        while counter <= k and leader:
             leader = leader.next
             counter += 1
         while leader:
             leader = leader.next
             follower = follower.next
-            count +=1
-        if kth > count:
+            counter +=1
+        if k > counter:
             raise IndexError("The list is not that big")
         return follower.value
 
