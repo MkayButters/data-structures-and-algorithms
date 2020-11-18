@@ -49,3 +49,22 @@ Approach we took was compelete the parts we knew how to do and pull it appart in
 ## Solution
 
 <img src="assests/cc06.png">
+
+
+# ll-kth-from-end
+
+ # Challenge Summary
+
+Worked with alex to create a whiteboard example and walked through to the solution.
+
+## Challenge Description
+
+Write a method for the Linked List class which takes a number, k, as a parameter. Return the node’s value that is k from the end of the linked list. You have access to the Node class and all the properties on the Linked List class as well as the methods created in previous challenges.
+
+## Approach & Efficiency
+
+Build the white board out use leader and follower and the big O is O(n)
+
+## Solution
+
+<img src="assests/cc07.png">

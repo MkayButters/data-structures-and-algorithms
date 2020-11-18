@@ -83,7 +83,7 @@ From the root of the `data-structures-and-algorithms/python` folder, execute the
  4. [CC 04](code_challenges/)
  5. [CC 05](code_challenges/linked_list)
  6. [CC 06](code_challenges/linked_list)
- 7. [CC 07](code_challenges/)
+ 7. [CC 07](code_challenges/linked_list)
  8. [CC 08](code_challenges/)
  9. [CC 09](code_challenges/)
  10. [CC 10](code_challenges/)

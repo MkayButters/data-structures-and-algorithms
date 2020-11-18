@@ -72,6 +72,23 @@ class LinkedList:
                 return
             current = current.next
 
+    def k_fromthe_end(self, k):
+        counter = 0
+        leader = self.head
+        follower = self.head
+        if k < 0:
+            raise ValueError("You cannot enter a negative integer")
+        while count <= k and leader:
+            leader = leader.next
+            counter += 1
+        while leader:
+            leader = leader.next
+            follower = follower.next
+            count +=1
+        if kth > count:
+            raise IndexError("The list is not that big")
+        return follower.value
+
 
 
 

@@ -127,3 +127,50 @@ def test_after_end():
     actual = str(make_list)
     expected = "{ 1 } -> { 3 } -> { 5 } -> { 11 } -> { 7 } -> { 8 } -> NULL"
     assert actual == expected
+
+##Challenge 07
+
+def test_greater_than_list_length():
+    make_list = LinkedList()
+    make_list.append("a")
+    make_list.append("b")
+    make_list.append("c")
+    make_list.k_fromthe_end(4)
+    expected =
+    assert expected
+
+
+
+def test_same_length_k():
+    make_list = LinkedList()
+    make_list.append("a")
+    make_list.append("b")
+    make_list.append("c")
+    make_list.k_fromthe_end(3)
+
+
+
+def test_negative_integer_k():
+    make_list = LinkedList()
+    make_list.append("a")
+    make_list.append("b")
+    make_list.append("c")
+    make_list.k_fromthe_end(-1)
+
+def test_length_one_k():
+    make_list = LinkedList()
+    make_list.append("a")
+    makelist.k_fromthe_end(1)
+
+
+
+
+def test_k_in_middle():
+    make_list = LinkedList()
+    make_list.append("a")
+    make_list.append("b")
+    make_list.append("c")
+    make_list.append("d")
+    make_list.k_fromthe_end(2)
+    
+
