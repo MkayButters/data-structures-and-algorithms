@@ -7,8 +7,11 @@ class Node:
         return f"{self.value}"
 
 class LinkedList:
-    def __init__(self, head = None):
-        self.head = head
+    def __init__(self, values = None, head = None):
+        self.head = None
+        if values:
+            for value in reversed(values):
+                self.insert(value)
 
     def insert(self, value):
         new_node = Node(value, self.head)
