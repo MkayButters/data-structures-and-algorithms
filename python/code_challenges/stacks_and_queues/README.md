@@ -1,5 +1,5 @@
 # Stacks and Queues
-<!-- Short summary or background information -->
+Write code that coinsides with the tests given to allow all of them to pass.
 
 
 ## Challenge
@@ -28,5 +28,12 @@
 Get the parts done that I know how to do first and slowly, use the reading for the rest of the parts each peice at a time.
 
 ## API
-<!-- Description of each method publicly available to your Stack and Queue-->
-Node class
+
+1. A method called pushe takes any value as an arguments and adds a new node with that value to the top of the stack with an 0(1) time performance.
+2. A method called pop that does not take any argument, removes the node from the top of the stack, and returns the node’s value.
+3. A method called peek that does not take an argument and returns the value of the node located on top of the stack, without removing it from the stack.
+4. A method called isEmpty that takes no argument, and returns a boolean indicating whether or not the stack is empty.
+5. A method called enqueue which takes any value as an argument and adds a new node with that value to the back of the queue with an O(1) Time performance.
+6. A method called dequeue that does not take any argument, removes the node from the front of the queue, and returns the node’s value.
+7. A method called peek that does not take an argument and returns the value of the node located in the front of the queue, without removing it from the queue.
+8. A method called isEmpty that takes no argument, and returns a boolean indicating whether or not the queue is empty.
