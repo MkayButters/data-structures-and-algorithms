@@ -25,7 +25,7 @@ Write code that coinsides with the tests given to allow all of them to pass.
 
 ## Approach & Efficiency
 
-Get the parts done that I know how to do first and slowly, use the reading for the rest of the parts each peice at a time.
+Get the parts done that I know how to do first and slowly, use the reading for the rest of the parts each peice at a time.       a
 
 ## API
 
