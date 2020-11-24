@@ -7,8 +7,11 @@ class Node:
         return f"{self.value}"
 
 class LinkedList:
-    def __init__(self, head = None):
-        self.head = head
+    def __init__(self, values = None, head = None):
+        self.head = None
+        if values:
+            for value in reversed(values):
+                self.insert(value)
 
     def insert(self, value):
         new_node = Node(value, self.head)
@@ -71,6 +74,23 @@ class LinkedList:
                 current.next = Node(newValue, current.next)
                 return
             current = current.next
+
+    def k_fromthe_end(self, k):
+        counter = 0
+        leader = self.head
+        follower = self.head
+        if k < 0:
+            raise ValueError("You cannot enter a negative integer")
+        while counter <= k and leader:
+            leader = leader.next
+            counter += 1
+        while leader:
+            leader = leader.next
+            follower = follower.next
+            counter +=1
+        if k > counter:
+            raise IndexError("The list is not that big")
+        return follower.value
 
 
 
