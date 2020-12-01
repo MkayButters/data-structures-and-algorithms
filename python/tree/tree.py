@@ -61,6 +61,29 @@ class BinaryTree:
 
         return values
 
+    def find_maximum_value(self):
+
+        current = self.root
+
+        if not self.root:
+            return "I pitty the empty fool!"
+
+        def walk(root):
+            nonlocal current
+
+            if not root:
+                return
+            if root.value > current.value:
+                current = root
+
+            walk(root.left)
+            walk(root.right)
+
+        walk(self.root)
+
+        return current.value
+
+
 
 
 class BinarySearchTree(BinaryTree):
@@ -77,7 +100,7 @@ class BinarySearchTree(BinaryTree):
             if node is None:
                 self.root = new_node
                 return
-                
+
             if value < node.value:
 
                 if not node.left:
