@@ -1,4 +1,4 @@
-from tree import BinaryTree, BinarySearchTree
+from tree import BinarySearchTree, BinaryTree, Node
 
 
 def test_instantiate_empty_tree():
@@ -51,10 +51,43 @@ def test_return_inorder_traversal():
 
 def test_return_postorder_traversal():
     tree = BinarySearchTree()
-    traverse = BinaryTree()
     tree.add(3)
     tree.add(2)
     tree.add(6)
     actual = tree.post_order()
     expected = [2,6,3]
+    assert actual == expected
+
+
+## Code Challenge 17 tests:
+
+def test_happy_maximum():
+    tree = BinaryTree()
+    Node1 = Node(7)
+    Node2 = Node(8)
+    Node3 = Node(788)
+    Node1.left = Node2
+    Node1.right = Node3
+    tree.root = Node1
+    actual = tree.find_maximum_value()
+    expected = 788
+    assert actual == expected
+
+
+def test_edge_negative_maxiumum():
+    tree = BinaryTree()
+    Node1 = Node(-7)
+    Node2 = Node(-8)
+    Node3 = Node(-78)
+    Node1.left = Node2
+    Node1.right = Node3
+    tree.root = Node1
+    actual = tree.find_maximum_value()
+    expected = -7
+    assert actual == expected
+
+def test_empty_maximum():
+    tree = BinaryTree()
+    actual = tree.find_maximum_value()
+    expected = "I pitty the empty fool!"
     assert actual == expected
