@@ -91,3 +91,32 @@ def test_empty_maximum():
     actual = tree.find_maximum_value()
     expected = "I pitty the empty fool!"
     assert actual == expected
+
+##Code Challenge 18
+
+def test_easy_queue_breadth():
+    tree = BinaryTree()
+    Node1 = Node(8)
+    Node2 = Node(9)
+    Node3 = Node(10)
+    Node1.left = Node2
+    Node1.right = Node3
+    tree.root = Node1
+    actual = tree.breadth_first()
+    expected = [8,9,10]
+    assert actual == expected
+
+def test_single_breadth():
+    tree = BinaryTree()
+    tree.root = Node(8)
+    actual = tree.breadth_first()
+    expected = [8]
+    assert actual == expected
+
+
+def test_empty_queue_breadth():
+    tree = BinaryTree()
+    actual = tree.breadth_first()
+    expected = "No bueno"
+    assert actual == expected
+

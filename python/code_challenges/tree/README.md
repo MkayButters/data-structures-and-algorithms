@@ -40,5 +40,27 @@ Write an instance method called find-maximum-value. Without utilizing any of the
 Build out the parts we know and implement them, use resources and google fu to find solution to the challenge. The big O might be for time , O(h), space will be O(n) based on the size of the tree.
 
 ## Solution
+
 <img src="assests/cc17.png"
+
+
+# Code Challenge 18
+
+## Challenge Summary
+
+We worked together to create a working method of binary trees.
+
+
+## Challenge Description
+
+Write a breadth first traversal method which takes a Binary Tree as its unique input. Without utilizing any of the built-in methods available to your language, traverse the input tree using a Breadth-first approach, and return a list of the values in the tree in the order they were encountered.
+
+
+## Approach & Efficiency
+
+Approach we took is understand the problem and complete the steps. The big O for this approach is O(n) and
+
+## Solution
+
+<img src="assests/cc18.jpeg">
 
