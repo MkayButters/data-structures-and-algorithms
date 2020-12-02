@@ -48,6 +48,7 @@ Build out the parts we know and implement them, use resources and google fu to f
 
 ## Challenge Summary
 
+We worked together to create a working method of binary trees.
 
 
 ## Challenge Description
@@ -56,7 +57,8 @@ Write a breadth first traversal method which takes a Binary Tree as its unique i
 
 
 ## Approach & Efficiency
-<!-- What approach did you take? Why? What is the Big O space/time for this approach? -->
+
+Approach we took is understand the problem and complete the steps. The big O for this approach is O(n) and
 
 ## Solution
 
