@@ -1,3 +1,5 @@
+from .stacks_and_queues import Queue
+
 class Node:
     def __init__(self, value):
         self.value = value
@@ -16,6 +18,7 @@ class BinaryTree:
         def walk(current):
 
             if not current:
+
                 return
 
             values.append(current.value)
@@ -61,28 +64,6 @@ class BinaryTree:
 
         return values
 
-    def find_maximum_value(self):
-
-        current = self.root
-
-        if not self.root:
-            return "I pitty the empty fool!"
-
-        def walk(root):
-            nonlocal current
-
-            if not root:
-                return
-            if root.value > current.value:
-                current = root
-
-            walk(root.left)
-            walk(root.right)
-
-        walk(self.root)
-
-        return current.value
-
     def breadth_first(self):
 
         temp_queue = Queue()
@@ -106,5 +87,32 @@ class BinaryTree:
         return results
 
 
-def tree_intersections():
-    
+
+def value_tree(tree1, tree2):
+
+    output = set()
+    values1 = tree1.breadth_first()
+    values2 = tree2.breadth_first()
+
+
+    for i in range(len(values1)):
+        try:
+            if values1[i] == values2[i]:
+                output.add(values1[i])
+        except IndexError:
+            pass
+    return output
+
+
+if __name__ == "__main__":
+    tree1 = BinaryTree()
+    tree2 = BinaryTree()
+    tree1.root = Node(1)
+    tree1.root.left = Node(2)
+    tree1.root.right = Node(3)
+    tree1.root.left.left = Node(4)
+    tree1.root.left.right = Node(5)
+    tree2.root = Node(1)
+    tree2.root.right = Node(3)
+    print(tree1.breadth_first())
+    print(tree1.pre_order())
