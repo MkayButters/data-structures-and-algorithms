@@ -19,3 +19,15 @@ def test_edge_case1():
     actual = check(string)
     expected = True
     assert actual == expected
+
+def test_false2():
+    string = '[([{'
+    actual = check(string)
+    expected = False
+    assert actual == expected
+
+def test_false3():
+    string = '[[[[[[[[[[[(){'
+    actual = check(string)
+    expected = False
+    assert actual == expected
